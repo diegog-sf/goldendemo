@@ -12,18 +12,12 @@ void main() {
     final device = const Device.zeplinDesignsWithInsets().highest();
 
     group('golden tests', () {
-      Widget _build() {
-        return simulateMainTabNavigator(
-          const MyHomePage(),
-        );
-      }
-
       group('group1', () {
         indigoGoldenWidgetBuilderTest(
           name: 'Test1',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           // No insets
           device: const Device.zeplinDesigns(),
@@ -33,7 +27,7 @@ void main() {
           name: 'Test2',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().copyWith(width: 1024),
         );
@@ -42,7 +36,7 @@ void main() {
           name: 'Test3',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().copyWith(width: 1024),
         );
@@ -51,7 +45,7 @@ void main() {
           name: 'Test4',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           // No insets
           device: const Device.zeplinDesigns().copyWith(height: 400),
@@ -63,7 +57,7 @@ void main() {
           name: 'Test5',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().higher(),
         );
@@ -72,7 +66,7 @@ void main() {
           name: 'Test6',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().higher(),
         );
@@ -81,7 +75,7 @@ void main() {
           name: 'Test7',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: device,
         );
@@ -92,7 +86,7 @@ void main() {
           name: 'Test8',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().higher(),
         );
@@ -101,7 +95,7 @@ void main() {
           name: 'Test9',
           setup: (tester) async {},
           builder: (_) {
-            return _build();
+            return const MyHomePage();
           },
           device: const Device.zeplinDesignsWithInsets().higher(),
         );

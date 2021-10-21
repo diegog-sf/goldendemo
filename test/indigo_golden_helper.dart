@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:meta/meta.dart';
@@ -32,24 +31,3 @@ void indigoGoldenWidgetBuilderTest({
       useDarkTheme: useDarkTheme,
       skip: skip,
     );
-
-// This simulates similar screen look as our main_tab_navigator.dart
-Widget simulateMainTabNavigator(Widget child) {
-  return Scaffold(
-      backgroundColor: Color(0xfff6f6f6),
-      body: child,
-      bottomNavigationBar: const Material(
-        elevation: 4,
-        color: Colors.white,
-        child: SafeArea(
-          left: false,
-          right: false,
-          top: false,
-          bottom: true,
-          child: SizedBox(
-            width: double.infinity,
-            height: 56.0,
-          ),
-        ),
-      ));
-}
